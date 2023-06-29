@@ -274,3 +274,21 @@ Acessar o grafana no browser com `IP_monitServer:3000`.
 > - senha = admin
 
 ![](../../imagens/ec2-pratica-prometheus-grafana-view2.png)
+
+Realizar a conexão do Grafana com o Prometheus para fazer o import das métricas. Acessar
+`Administration > Data sources > +ADD new data source` e selecionar o Prometheus. Informar o
+endpoint do Prometheus como `http://localhost:9090`.
+
+![](../../imagens/ec2-pratica-prometheus-grafana-endpointGrafana.png)
+
+Para importar um dash, acessar `Dashboard > New > Import` e informar o código 1860 para utilizar um dos templates do Grafana.
+
+![](../../imagens/ec2-pratica-prometheus-grafana-import.png)
+
+Configurar as informações do painel e clicar em Import.
+
+![](../../imagens/ec2-pratica-prometheus-grafana-config.png)
+
+Com isso o painel será exibido com as métricas criadas no Prometheus.
+
+![](../../imagens/ec2-pratica-prometheus-grafana-dash.png)
